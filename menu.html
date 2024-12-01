@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Array to store selected items
+        let cart = [];
+
+        // Function to add items to the cart
+        function addToCart(item) {
+            cart.push(item);
+            alert(item + " added to your cart!");
+        }
+
+        // Function to handle checkout
+        function checkout() {
+            if (cart.length > 0) {
+                alert("Order placed successfully!");
+                cart = []; // Clear the cart after order is placed
+            } else {
+                alert("Your cart is empty. Please add items to your cart.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="animated-title">Menu</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="feedback.html" class="nav-link">Feedback</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+
+            <!-- Menu Item 1 -->
+            <div class="menu-item">
+                <h3>Pizza</h3>
+                <p>Delicious cheesy pizza with your choice of toppings.</p>
+                <button onclick="addToCart('Pizza')">Add to Cart</button>
+            </div>
+
+            <!-- Menu Item 2 -->
+            <div class="menu-item">
+                <h3>Burger</h3>
+                <p>Juicy grilled burger with fresh veggies.</p>
+                <button onclick="addToCart('Burger')">Add to Cart</button>
+            </div>
+
+            <!-- Menu Item 3 -->
+            <div class="menu-item">
+                <h3>Pasta</h3>
+                <p>Rich and creamy pasta with a variety of sauces.</p>
+                <button onclick="addToCart('Pasta')">Add to Cart</button>
+            </div>
+
+            <!-- Checkout Button -->
+            <div class="checkout-section">
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Our Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

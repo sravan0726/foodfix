@@ -1,0 +1,210 @@
+/* Transparent Paddings for All Sections */
+section {
+    padding: 50px 0;
+    margin: 30px 0;
+    position: relative;
+    z-index: 1;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(6, 170, 148, 0.336); /* Transparent overlay */
+    z-index: -1;
+    backdrop-filter: blur(2px); /* Blur effect for depth */
+    border: 1px solid rgba(223, 12, 12, 0.404); /* Subtle border effect */
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background for tech feel */
+    background-image: url(https://static.vecteezy.com/system/resources/previews/036/804/331/non_2x/ai-generated-assorted-indian-food-on-dark-wooden-background-free-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-attachment: fixed; /* Make the image fixed during scrolling */
+    background-position: center; /* Center the image */
+    color: #ffe7a7; /* Light text for contrast */
+}
+
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0d55259c, #968809c9, #2c5364); /* Gradient for futuristic vibe */
+    padding: 40px 0;
+    color: #edff9fe7;
+    text-align: center;
+    border-bottom: 3px solid #0f2027;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #e0e0e0;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #00e0ff; /* Neon cyan hover effect */
+}
+
+/* Content Boxes */
+.content-box {
+    background-color: #1e1e1e; /* Darker box for contrast */
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #00e0ff; /* Highlighted border for tech effect */
+}
+
+/* Home Page */
+.home {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #00e0ff; /* Neon accent color */
+}
+
+.home p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #cfcfcf;
+}
+
+/* Menu Page */
+.menu {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00e0ff;
+    text-transform: uppercase;
+}
+
+.menu .menu-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu .menu-item {
+    width: 30%;
+    margin: 15px 0;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu .menu-item:hover {
+    transform: scale(1.05); /* Slight pop effect on hover */
+}
+
+.menu .menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu .menu-item h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #00e0ff;
+}
+
+.menu .menu-item p {
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+/* Feedback Page */
+.feedback {
+    background-color: #1e1e1e;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.feedback h2 {
+    font-size: 40px;
+    color: #00e0ff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #00e0ff;
+}
+
+.star-rating {
+    margin: 30px 0;
+}
+
+.star {
+    font-size: 40px;
+    color: #555; /* Unselected stars */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.star.selected {
+    color: #ff9800; /* Gold color for selected stars */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient for futuristic buttons */
+    color: #fff;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #0f2027d2, #20433e94, #2c53645b);
+    color: #ffe1b3;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 16px;
+    color: #ffbc57;
+}

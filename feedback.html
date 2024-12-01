@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="animated-title">Feedback</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="feedback.html" class="nav-link">Feedback</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback">
+        <div class="container">
+            <h2>We value your feedback</h2>
+            <p>Please rate your satisfaction level and provide any additional feedback below:</p>
+
+            <!-- Star Rating -->
+            <div class="star-rating">
+                <label>
+                    <input type="radio" name="rating" value="1" onclick="updateStars(1)"> 1 Star
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2" onclick="updateStars(2)"> 2 Stars
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3" onclick="updateStars(3)"> 3 Stars
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4" onclick="updateStars(4)"> 4 Stars
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5" onclick="updateStars(5)"> 5 Stars
+                </label>
+            </div>
+
+            <!-- Feedback Text Area -->
+            <textarea id="feedbackMessage" placeholder="Write your feedback here..." rows="5" style="width: 100%; margin-top: 20px; padding: 10px; border-radius: 5px;"></textarea>
+
+            <!-- Submit Button -->
+            <button onclick="submitFeedback()" style="margin-top: 20px;">Submit Feedback</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Our Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
